@@ -1,0 +1,63 @@
+name: Dataset request
+description: Ask LabZero to build a dataset for your domain.
+title: "Dataset request: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do not include anything confidential, and do not attach files you cannot share openly.
+
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: The field the dataset is for.
+    validations:
+      required: true
+
+  - type: textarea
+    id: teach
+    attributes:
+      label: What the dataset should teach a model
+      description: The skill or knowledge a model should have after training on it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Rough size or scope
+      description: An estimate is enough.
+    validations:
+      required: false
+
+  - type: textarea
+    id: done
+    attributes:
+      label: What done looks like
+      description: How you would judge the quality of the result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source material you can share or license
+      description: Describe it here. Do not upload it, since this issue is public.
+    validations:
+      required: false
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Public issue
+      options:
+        - label: I understand this issue is public
+          required: true
